@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+    <link rel="stylesheet" href="./assets/CSS/quiz.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&family=Unica+One&display=swap"
+        rel="stylesheet">
+    <title>QUIZ</title>
+</head>
+
+<body>
+    <div class="info">
+        <div class="glitch-bloc">
+            <p class="invisible-text">Bienvenue dans le QUIZ SHOW</p>
+            <p class="glitchedAnim">Bienvenue dans le QUIZ SHOW</p>
+            <p class="glitchedAnim">Bienvenue dans le QUIZ SHOW</p>
+            <p class="glitchedAnim">Bienvenue dans le QUIZ SHOW</p>
+        </div>
+    </div>
+
+    <main>
+
+        <div class="container-fluid bg-dark center">
+            <div class="modal-dialog ">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h3 class="text-dark" id="questions"><span class="label label-warning" id="qid"></span>Choisi la
+                            bonne réponse</h3>
+                    </div>
+                    <div class="modal-body">
+                        <div class="col-xs-3 col-xs-offset-5">
+                            <div id="loadbar" style="display: none;">
+                                <div class="blockG" id="rotateG_01"></div>
+                                <div class="blockG" id="rotateG_02"></div>
+                                <div class="blockG" id="rotateG_03"></div>
+                                <div class="blockG" id="rotateG_04"></div>
+                                <div class="blockG" id="rotateG_05"></div>
+                                <div class="blockG" id="rotateG_06"></div>
+                                <div class="blockG" id="rotateG_07"></div>
+                                <div class="blockG" id="rotateG_08"></div>
+                            </div>
+                        </div>
+
+                        <div class="quiz" id="quiz" data-toggle="buttons" id="opa">
+                            <label class="element-animation5 btn btn-lg btn-block" onclick="start()">
+                                <span class="btn-label"><i class="glyphicon glyphicon-chevron-right"></i></span>
+                                <input type="radio" name="q_answer" value="">
+                                <p>Commencer le Quiz</p>
+                            </label>
+                            <div id="novisible">
+                                <label class="element-animation1 btn btn-lg btn-block"><span class="btn-label">
+                                        <i class="glyphicon glyphicon-chevron-right"></i></span>
+
+                                    <p class="reponse" onclick="answer(this)"></p>
+                                </label>
+                                <label class="element-animation2 btn btn-lg  btn-block">
+                                    <span class="btn-label"><i class="glyphicon glyphicon-chevron-right"></i></span>
+
+                                    <p class="reponse" onclick="answer(this)"></p>
+                                </label>
+                                <label class="element-animation3 btn btn-lg  btn-block"><span class="btn-label"><i
+                                            class="glyphicon glyphicon-chevron-right"></i></span>
+                                    <p class="reponse" onclick="answer(this)"></p>
+                                </label>
+                                <label class="element-animation4 btn btn-lg btn-block"><span class="btn-label"><i
+                                            class="glyphicon glyphicon-chevron-right"></i></span>
+                                    <p class="reponse" onclick="answer(this)"></p>
+                                </label>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="modal-footer text-muted text-dark" id="footerTAB">
+                        <button id="refresh" onclick="restart()" class="btn btn-outline-dark">Rejouer</button>
+                        <div id="timer"></div>
+                        <span class="text-dark" id="answer"></span>
+                        <div id="end"></div>
+                        <h3 id="score">Votre score</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+<script src="./assets/JS/quiz.js"></script>
+
+</html>
